@@ -1,0 +1,19 @@
+@mixin line_style {
+    display: flex;
+    width: 1px;
+    height: 84px;
+    margin: auto;
+    background-color: rgba(135, 135, 157, 0.25);
+    opacity: .25;
+}
+
+@mixin circle_style {
+    width: 56px;
+    height: 56px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 29px; 
+    border: 1px rgba(135, 135, 157, 0.25) solid;
+}

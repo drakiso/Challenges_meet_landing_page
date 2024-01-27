@@ -1,0 +1,54 @@
+body {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: $text-primary;
+    line-height: 26px;
+
+    @media screen and (max-width: 1279.9px) {
+        font-size: 16px;
+    }
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 64px;
+    color: $text-secondary;
+
+    @media screen and (max-width: 1279.9px) {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    @media screen and (max-width: 767.9px) {
+        font-size: 40px;
+        line-height: 44px;
+    }
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 44px;
+    color: $text-secondary;
+
+    @media screen and (max-width: 1279.9px) {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    @media screen and (max-width: 767.9px) {
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 26px;
+    letter-spacing: 4px;
+    color: $text-info;
+    text-transform: uppercase;
+}

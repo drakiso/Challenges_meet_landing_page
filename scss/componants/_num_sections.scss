@@ -1,0 +1,11 @@
+.num {
+    text-align: center;
+
+    &--line {
+        @include line_style
+    }
+
+    &--circle {
+        @include circle_style
+    }
+}

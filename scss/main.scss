@@ -1,0 +1,322 @@
+@import "./utils/variables",
+        "./utils/mixins";
+
+@import "./bases/reset",
+        "./bases/typography";
+
+@import "./componants/button",
+        "./componants/num_sections";
+
+// Image hero
+body {
+    background: url("../assets/images/desktop/image-hero-left.png") no-repeat top 169px
+    left -32px, url("../assets/images/desktop/image-hero-right.png") no-repeat top 224px
+    right -32px;
+
+    @media screen and (max-width: 1279.9px) {
+        background: url("../assets/images/tablet/image-hero.png") no-repeat top 140px
+        left 50%;
+    }
+
+    @media screen and (max-width: 767.9px) {
+        background: url("../assets/images/tablet/image-hero.png") no-repeat top 130px
+        left 50% / 414px 153px;
+    }
+}
+
+// Center the page
+.wrapper {
+    max-width: 1110px;
+    margin: auto;
+
+    @media screen and (max-width: 1279.9px) {
+        max-width: 689px;
+    }
+
+    @media screen and (max-width: 767.9px) {
+        max-width: 327px;
+    }
+}
+
+// style header
+header {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 108px;
+
+    @media screen and (max-width: 1279.9px) {
+        margin-top: 48px;
+        margin-bottom: 439px;
+    }
+
+    @media screen and (max-width: 767.9px) {
+        margin-bottom: 255px;
+    }
+}
+
+// style section hero
+.hero {
+    width: 540px;
+    margin: auto;
+    text-align: center;
+
+    @media screen and (max-width: 1279.9px) {
+        width: 457px;
+    }
+
+    @media screen and (max-width: 767.9px) {
+        width: 327px;
+    }
+
+    h1 {
+        margin: 0 47px;
+
+        @media screen and (max-width: 1279.9px) {
+            margin: 0 59px;
+        }
+
+        @media screen and (max-width: 767.9px) {
+            margin: 0 30px;
+        }
+    }
+
+    P {
+        padding-top: 34px;
+        padding-bottom: 32px;
+
+        @media screen and (max-width: 1279.9px) {
+            padding-top: 24px;
+            padding-bottom: 32px;
+        }
+    }
+
+    .CTA {
+        display: flex;
+        justify-content: center;
+        gap: 16px; 
+
+        @media screen and (max-width: 767.9px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__info {
+            background-color: $bg-button-secondary;
+            padding-left: 29px;
+            padding-right: 29px;
+        }
+
+        &__info:hover {
+            background-color: #B18BDD;
+        }
+    }
+
+    span {
+        color: $emphasize-primary;
+    }
+
+    button:hover {
+        background-color: #71C0D4;
+    }
+}
+
+// style section illustration 
+.illustration {
+    margin: 117px 0 80px;
+
+    @media screen and (max-width: 1279.9px) {
+        margin: 80px 0 48px;
+    }
+
+    @media screen and (max-width: 767.9px) {
+        margin: 64px 0;
+    }
+
+    &__grid {
+        img {
+            width: 255px;
+            height: 242px;
+            border-radius: 7px;
+            object-fit: contain;
+
+            @media screen and (max-width: 1279.9px) {
+                width: 164px;
+                height: 156px;
+            }
+
+            @media screen and (max-width: 767.9px) {
+                width: 151px;
+                height: 143px;
+            }
+        }
+        
+        margin-top: 64px;
+        display: grid;
+        grid-template: 242px / repeat(4, 255px);
+        column-gap: 30px;
+
+        @media screen and (max-width: 1279.9px) {
+            margin-top: 67.16px;
+            grid-template: 156px / repeat(4, 164px);
+            column-gap: 11px;
+        }
+
+        @media screen and (max-width: 767.9px) {
+            margin-top: 64px;
+            grid-template: repeat(2, 151px) / repeat(2, 143px);
+            column-gap: 25px;
+            row-gap: 24px;
+        }
+    }
+}
+
+// style section benefits
+.benefits {
+    width: 520px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 1279.9px) {
+        width: 573px;
+    }
+
+    @media screen and (max-width: 767.9px) {
+        width: 100%;
+    }
+
+    h2 {
+        order: 2;
+        padding: 16px 47px 32px 48px;
+
+        @media screen and (max-width: 1279.9px) {
+            padding: 16px 63px 32px 65px;
+        }
+
+        @media screen and (max-width: 767.9px) {
+            padding: 24px 0 32px;
+        }
+    }
+
+    h3 {
+        order: 1;
+    }
+
+    p {
+        order: 3;
+    }
+
+    span {
+        white-space: nowrap;
+    }
+}
+
+// style footer
+/* A retenir
+Background-color est toujours la derniere couche
+Pour mettre un background transparent sur un autre,
+Utiliser un position relative sur l'element de base
+position absolute sur le second element et positionner son element
+Regarder la partie avec le pseudo-element ::after */
+footer {
+    margin-top: 184px;
+    position: relative;
+    background-color: $bg-secondary;
+
+    @media screen and (max-width: 1279.9px) {
+        margin-top: 192px;
+    }
+
+    @media screen and (max-width: 767.9px) {
+        margin-top: 176px;
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+        max-width: 1110px;
+        margin: auto;
+        padding: 116px 0;
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 1279.9px) {
+            max-width: 689px;
+            padding: 92px 0 66px;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 767.9px) {
+            max-width: 327px;
+            padding: 92px 0 72px;
+        }
+    }
+
+    p {
+        width: 350px;
+        color: $text-light;
+        margin-left: 125px;
+        margin-right: 92px;
+
+        @media screen and (max-width: 1279.9px) {
+            width: 573px;
+            margin: 32px 0 40px;
+            font-size: 18px;
+        }
+
+        @media screen and (max-width: 767.9px) {
+            width: 100%;
+            margin: 24px 0 32px;
+        }
+    }
+
+    h2 {
+        width: 350px;
+        color: $text-light;
+
+        @media screen and (max-width: 1279.9px) {
+            width: 457px;
+        }
+
+        @media screen and (max-width: 767.9px) {
+            width: 100%;
+        }
+    }
+
+    button {
+        background-color: $bg-button-secondary;
+
+        &:hover {
+            background-color: #B18BDD;
+        }
+    }
+
+    span {
+        color: $emphasize-secondary;
+    }
+
+    .num {
+        position: absolute;
+        top: -112px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 1;
+        background-color: white;
+        border-bottom-left-radius: 29px;
+        border-bottom-right-radius: 29px;
+    }
+
+    &::after {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: url("../assets/images/mobile/image-footer.jpg") no-repeat 
+        center / cover;
+        opacity: 0.1045;
+    }
+}
