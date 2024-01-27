@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [My solution]()
-- Live Site URL: [Live site]()
+- Solution URL: [My solution](https://www.frontendmentor.io/solutions/meet-responsive-landing-page-ncdnAQO3Oy)
+- Live Site URL: [Live site](https://drakiso.github.io/Challenges_meet_landing_page/)
 
 ## My process
 
@@ -43,4 +43,4 @@ Users should be able to:
 
 - linkedin - [Israel Anzan](https://www.linkedin.com/in/drakisrael)
 - Frontend Mentor - [@drakiso](https://www.frontendmentor.io/profile/drakiso)
-- Twitter - [@DrAKIso_225](https://www.twitter.com/LeChefKoulango)
+- Twitter - [@LeChefKoulango](https://www.twitter.com/LeChefKoulango)
